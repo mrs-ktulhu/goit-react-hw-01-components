@@ -1,3 +1,5 @@
+import './transactions.css';
+
 export const TransactionHistory = ({ transactions }) => (
   <table className="transaction-history">
     <thead>

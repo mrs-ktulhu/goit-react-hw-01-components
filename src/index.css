@@ -3,6 +3,7 @@
 body {
   font-family: sans-serif;
   line-height: 1.5;
+  list-style-type: none;
 }
 
 h1,
