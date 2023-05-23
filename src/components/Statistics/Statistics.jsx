@@ -7,11 +7,11 @@ export const Statistics = ({ statistic }) => (
     <h2 className="title">{statistic.title }</h2>
 
     <ul className="stat-list">
-      {statistic.map((item) => {
+      {statistic.map(({id, label, percentage }) => {
         return (
-          <li key={item.id} className="item" style={{ backgroundColor: getRandomColor() }}>
-            <span className="label">{item.label}</span>
-            <span className="percentage">{item.percentage}%</span>
+          <li key={id} className="item" style={{ backgroundColor: getRandomColor() }}>
+            <span className="label">{label}</span>
+            <span className="percentage">{percentage}%</span>
           </li>
         )   
        })}
