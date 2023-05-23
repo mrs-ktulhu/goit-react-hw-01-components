@@ -2,12 +2,12 @@ import PropTypes from "prop-types";
 import './statistics.css';
 import { getRandomColor } from "index";
 
-export const Statistics = ({ data }) => (
+export const Statistics = ({ statistic }) => (
   <section className="statistics">
     <h2 className="title">Upload stats</h2>
 
     <ul className="stat-list">
-      {data.map((item,index) => {
+      {statistic.map((item,index) => {
         return (
           <li key={item.id} className="item" style={{ backgroundColor: getRandomColor() }}>
             <span className="label">{item.label}</span>
