@@ -1,18 +1,19 @@
+import styled from '@emotion/styled'
 
-/* .title {
+export const StatisticsTitle = styled.h2`
     text-transform: uppercase;
     color: #3c3c3c;
     display: flex;
     justify-content: center;
     background-color: #fff;
     padding: 20px 0px;
-} */
+`
 
-.stat-list {
+export const StatisticList = styled.ul`
     display: flex;
-}
+`
 
-.item {
+export const StatisticItem = styled.li`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,10 +23,10 @@
 
     color: #fff;
     background-color: #ccc;
-}
+`
 
-.label {
+export const StatisticLabel = styled.span`
     font-size: 12px;
     margin-bottom: 10px;
     color: #fff;
-}
+`
