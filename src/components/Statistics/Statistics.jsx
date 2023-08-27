@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 import './statistics.css';
 import { getRandomColor } from "index";
 
-export const Statistics = ({ statistic }) => (
+export const Statistics = ({ statistic, title }) => (
   <section className="statistics">
-    <h2 className="title">{statistic.title }</h2>
+    {title && (<h2 className="title">{title}</h2>)}
 
     <ul className="stat-list">
       {statistic.map(({id, label, percentage }) => {
@@ -20,7 +20,8 @@ export const Statistics = ({ statistic }) => (
 )
 
 Statistics.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.shape({
+  statistic: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     percentage: PropTypes.number.isRequired
   }))

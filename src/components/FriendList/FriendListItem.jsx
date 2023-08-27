@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 export const FriendListItem = ({ avatar,name,isOnline }) => {
     const classNames = ["status"];
     if (isOnline) classNames.push("is-online");
@@ -9,3 +10,11 @@ export const FriendListItem = ({ avatar,name,isOnline }) => {
         </li>
     )
 }
+
+FriendListItem.propTypes = {
+    friends: PropTypes.shape({
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline:PropTypes.bool.isRequired,
+    })
+  };
